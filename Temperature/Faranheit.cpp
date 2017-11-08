@@ -1,5 +1,11 @@
 #include "Faranheit.h"
+#include <iostream>
 
+
+ostream& Faranheit::operator<<(const ostream& rhs) const
+{
+	rhs << m_temp;
+}
 
 Faranheit::operator double() const
 {
@@ -10,6 +16,10 @@ Faranheit::Faranheit()
 {
 }
 
+Faranheit::Faranheit(int temp)
+{
+	m_temp = temp;
+}
 
 Faranheit::~Faranheit()
 {

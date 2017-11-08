@@ -19,6 +19,12 @@ Celsius::operator double() const
 	return m_temp;
 }
 
+ostream& Celsius::operator<<(const ostream& rhs) const
+{
+	rhs << m_temp;
+	return rhs;
+}
+
 Celsius::Celsius()
 {
 }

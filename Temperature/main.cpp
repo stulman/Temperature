@@ -1,14 +1,17 @@
 #include "Celsius.h"
 #include "Faranheit.h"
+#include <string>
+#include <iostream>
 
-void prettyPrint(Celsius c)
+void prettyPrint(const String& msg, int temp)
 {
-
+	cout << msg << Celsius(temp) << " Celsius and " << Faranheit(temp) << " Farenheit\n";
 }
 
 int main()
 {
-	Celsius c(0), b(100), z(-273);
-	prettyPrint(c);
+	prettyPrint("The freezing point of water is: ", 0);
+	prettyPrint("The boiling point of water is: ", 100);
+	prettyPrint("The absolute freezing point is: ", -273)
 	return 0;
 }
